@@ -1,11 +1,27 @@
-/* update this file */
+
 body {
   background-color: lightyellow;
   text-align: center;
 }
 h1 {
   color: blue;
+  font-weight: bold;
 }
 p {
   color: red;
 }
+
+.city{font-weight: bold;
+      text-align: center};
+
+.temperature{color: red;
+      text-align: center;}
+
+.humidity{color: black;
+      text-align: center;}
+
+.condition{color: black;
+  text-align: center;}
+
+.rain{color: red;
+      text-align: center;}

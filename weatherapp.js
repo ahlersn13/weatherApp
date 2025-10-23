@@ -57,13 +57,23 @@ req.end(function (res) {
 
 
     response.send(`
-        <h1>${cityName}</h1>
-        <p>Temperature: ${temp} °F</p>
-        <p>Humidity: ${humidity}%</p>
-        <p>Current: ${description}</p>
-        <p>Rain Today: ${dailyRain}mm in the last hour</p>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <title>Weather App</title>
+          <link rel="stylesheet" href="/style.css">
+      </head>
+      <body>
+        <h1 class="City">${cityName}</h1>
+        <p class="temperature">Temperature: ${temp} °F</p>
+        <p class="humidity">Humidity: ${humidity}%</p>
+        <p class="condition">Current Condition: ${description}</p>
+        <p class="rain">Rain Today: ${dailyRain}mm in the last hour</p>
         <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}"> 
         <a href="/">Check another city</a>
+      </body>
+      </html>
     `); //Formats page to show more logical print out and pulls in picture from API
 }); 
 })
