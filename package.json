@@ -1,0 +1,26 @@
+{
+  "name": "lab-2-ahlersn13",
+  "version": "1.0.0",
+  "description": "In this lab you will build a weather app using Node.js and API calls.",
+  "main": "weatherapp.js",
+  "scripts": {
+    "start": "node weatherapp.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franklin-University-ITEC660-FA25/lab-2-ahlersn13.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Franklin-University-ITEC660-FA25/lab-2-ahlersn13/issues"
+  },
+  "homepage": "https://github.com/Franklin-University-ITEC660-FA25/lab-2-ahlersn13#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "unirest": "^0.6.0"
+  }
+}
