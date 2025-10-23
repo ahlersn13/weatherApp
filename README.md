@@ -28,6 +28,8 @@ npm init
     1. Test your code for full functionality.
     2. For example: What happens if they enter nothing for the city name? How can you fix inside the code is it is empty?
 8. Display on your page at least **three** weather-related information in a nice way. Get creative with your design. You can add icons or use API icons if there are any.
+    Formatted to easier read main weather topics (temp, humidity, conditions, rain in the last hour)
+    Pulled icon from API
 9. Last but not the least, **deploy and run** your app on the site we recommend.
     1. Submit your deployed link in the github repository read.me file.
 10. Update the **readme file** by answering the following questions:

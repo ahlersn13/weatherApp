@@ -37,15 +37,39 @@ app.post("/", function(request,response) {
   });
 
 
-  req.end(function (res) {
-    if (res.error) throw new Error(res.error);
-    response.send(res.body); //Update
-  });
+req.end(function (res) {
+    if (res.error) {
+        response.send(`
+            <h1>Could not get weather. Please enter a city:</h1> 
+            <p>Error Details: ${res.error}</p>
+            <a href="/">Try Again</a>
+        `); //in case of error, request the user to re-enter
+        return;
+    }
+
+ const data = res.body;
+    const cityName = data.name;
+    const temp = data.main.temp;
+    const humidity = data.main.humidity;
+    const description = data.weather[0].description;
+    const icon = data.weather[0].icon;
+    const dailyRain = data.rain ? data.rain["1h"] : 0; // convert to %
 
 
-});
+    response.send(`
+        <h1>${cityName}</h1>
+        <p>Temperature: ${temp} °F</p>
+        <p>Humidity: ${humidity}%</p>
+        <p>Current: ${description}</p>
+        <p>Rain Today: ${dailyRain}mm in the last hour</p>
+        <img src="http://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}"> 
+        <a href="/">Check another city</a>
+    `); //Formats page to show more logical print out and pulls in picture from API
+}); 
+})
+;
 
 let port = process.env.PORT || 8002;
 app.listen(port, function() {
-    console.log ("Server running on port 8002");
+    console.log (`Server running on port ${port}`); //updated to be able to run in render
 })
