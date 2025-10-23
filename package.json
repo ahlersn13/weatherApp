@@ -4,7 +4,7 @@
   "description": "In this lab you will build a weather app using Node.js and API calls.",
   "main": "weatherapp.js",
   "scripts": {
-    "start": "node weatherapp.js"
+    "start": "node weatherapp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
